@@ -6,10 +6,79 @@
           justify-content:center;align-items:center;display:flex;flex-direction:column;
         }
       </style>
+      <div id="1page">
+        </style>
       <div class="mid">
         <p style="font-size:60px">Eagtek</p>
         <p>The build you are currently using is from</p>
-        <p style="font-size:50px;color:red">2022/3/9</p>
+        <p style="margin-top: -10px;font-size:30px;color:red">2022/3/9</p>
       </div>
+      </div>
+      <div style="visibility: hidden" id="2page">
+        <div class="mid">
+            <p style="font-size: 70px"></p>
+            <p id="loader" style="font-size: 30px">grabbing assets</p>
+            <p style="margin-top: -20px; color:red"id="loaderpercentage">1%</p>
+        </div>
+      </div>
+      <div style="visibility: hidden"id="failed">
+        <p style="font-size: 30px" >Couldnt load Eaglercraft.</p>
+        <p style="margin-top: 50px;color:red">I have fallen! And i cant get up!</p>
+        <p style="margin-top: -10px">It seems like you have encountered an error, the game couldnt be loaded on the page</p>
+        <p style="margin-top: -10px">If this has happened multiple times, please try to use another device, its not a bug, its common sense. </p>
+        <p style="margin-top: -10px">Devices that are supported: Windows, Chromebook, Phone, Mac, Linux</p>
+        <p style="color: red;margin-top: -10px">This could also be that your google ASPI may not be turned on, or that your using an bad web browser, or one that we dont support (yet)</p>
+        <a href="http://eaglercraft.com" style="margin-top: -10px">If this build is old, click me so you can go to an newer version.</a>
+        <p style="margin-top: -10px"> </p>
+        <p style="margin-top: -10px">The version you are currently using is V1.0.0</p>
+        <p style="margin-top: -10px">Device that you are using: nil</p>
+      </div>
+      <script>
+        function loadingtext() {
+          setTimeout(function() {
+            document.getElementById("loaderpercentage").innerText = "1"              +"%"
+        }, 1000);
+          setTimeout(function() {
+            document.getElementById("loaderpercentage").innerText = "4"              +"%"
+        }, 1300);
+          setTimeout(function() {
+            document.getElementById("loaderpercentage").innerText = "6"              +"%"
+        }, 1900);
+          setTimeout(function() {
+            document.getElementById("loaderpercentage").innerText = "15"              +"%"
+        }, 2400);
+          setTimeout(function() {
+            document.getElementById("loaderpercentage").innerText = "40"              +"%"
+        }, 3000);
+          setTimeout(function() {
+            document.getElementById("loaderpercentage").innerText = "70"              +"%"
+        }, 5000);
+          setTimeout(function() {
+            document.getElementById("loaderpercentage").innerText = "100"              +"%"
+        }, 8000);
+        }
+        loadingtext()
+        setTimeout(function() {
+            document.getElementById("1page").style.display = "none";
+            document.getElementById("2page").style.visibility = "visible";
+        }, 1500);
+        setTimeout(function() {
+            document.getElementById("loader").innerText = "grabbing assets"
+        }, 1900);
+        
+        setTimeout(function() {
+            document.getElementById("loader").innerText = "getting functions"
+        }, 2000);
+        
+        setTimeout(function() {
+            document.getElementById("loader").innerText = "getting sounds"
+        }, 6000);
+        
+        setTimeout(function() {
+            document.getElementById("2page").style.display = "none"
+            document.getElementById("failed").style.visibility = "visible"
+        }, 9000);
+      </script>
+      
     </body>
 </html>
